@@ -1,3 +1,8 @@
 # robotstxt.org/
 
 User-agent: *
+Disallow: /cgi-bin/
+Disallow: /pvt.artanddesign.us/
+Disallow: /old/
+Disallow: /test.com/
+Disallow: /.DS_Store/

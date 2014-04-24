@@ -1,5 +1,5 @@
 ---
-title:     Art and Design
+title:     art and design
 bodyclass: main
 ---
 
@@ -19,6 +19,7 @@ bodyclass: main
     .page
       %ul.left
         %li Responsive websites
+        %li Portfolios, catalogue raisonnés
         %li Brochure websites
         %li Business and commerce
         %li Check out our recent, featured projects
@@ -30,10 +31,14 @@ bodyclass: main
   .wide-wrap
     .page
       .gallery
-        %img{ :src => "/images/norma.png", :alt => "website screenshot" }
-        %img{ :src => "/images/sites-HK.jpg", :alt => "website screenshot" }
-        %img{ :src => "/images/sites-aS.jpg", :alt => "website screenshot" }
-        %img{ :src => "/images/live.jpg", :alt => "website screenshot" }
+        %a{:href=>"http://normamarkley.com"}
+          %img{ :src => "images/norma.png", :alt => "website screenshot" }
+        %a{:href=>"http://hillarykeel.com"}
+          %img{ :src => "images/sites-HK.jpg", :alt => "website screenshot" }
+        %a{:href=>"http://thewatercolorclub.com"}
+          %img{ :src => "images/sites-aS.jpg", :alt => "website screenshot" }
+        %a{:href=>"http://livemagnyc.com"}
+          %img{ :src => "images/live.jpg", :alt => "website screenshot" }
 
 %section
   .wide-wrap
@@ -49,7 +54,7 @@ bodyclass: main
           %br &mdash; H. K., NYC.
 
         %p 
-          %em Lori is a hard-working, result-driven member of my team. Her contribution is enormous. Her web design and promotional efforts set her apart.
+          %em Lori has created three websites for me. Each one is unique, easy to navigate and gets great results. I'm thrilled to have her on board.
           %br &mdash; Jeff Wright, Live Mag!
 %section    
   .wide-wrap
@@ -66,11 +71,23 @@ bodyclass: main
       .logo-wrap
         .logo
           %a{:href=>"http://communitygardensbrand.com"}    
-            %img{ :src => "/images/garden.png", :alt => "garden logo" }
+            %img{ :src => "images/garden.png", :alt => "garden logo" }
             %p Community Gardens Brand
         .logo
-          %img{ :src => "/images/sass1.png", :alt => "sass logo" }
+          %img{ :src => "images/sass1.png", :alt => "sass logo" }
           %p.center SASS
+%section    
+  .wide-wrap
+    .page-transparent
+      .socials
+        %a{:href=>"http://twitter.com/LoriNYNY"}
+          %i.fa.fa-twitter.fa-3x
+        %a{:href=>"http://github.com/lorio"}
+          %i.fa.fa-github.fa-3x
+        %a{:href=>"http://linkedin.com/in/loriortiz"}
+          %i.fa.fa-linkedin-square.fa-3x
+        %a{:href=>"http://lorio.github.io/blog"}  
+          %i.fa.fa-lightbulb-o.fa-3x
 
             
 

@@ -52,11 +52,11 @@ $main-color: rgba(10,16,30,.9);
 $heading-color: #c12a36;
 $border-color: #bed3e7;
 //links
-$normal: rgb(0, 0, 255);
-$hover: rgba(0, 0, 255, 0.5);
-$active: rgba(0, 0, 255, 0.5);
-$visited: rgba(0, 0, 255, 0.2);
-$focus: rgba(0, 0, 255, 0.2);
+$normal: #659abd;
+$hover: #8abce7;
+$active: #8abce7;
+$visited: #6ea7e2;
+$focus: #6ea7e2;
 
 $breakpoint-S: min-width 28em;
 $breakpoint-M: min-width 48em;
@@ -176,7 +176,7 @@ footer {
   }
   .lead {
     padding: 10% 0 40% 0;
-    background-image: url(images/trees.jpg);
+    background-image: url(../images/trees.jpg);
   }
 
   .left {
@@ -217,31 +217,32 @@ section, .page, .page-blanc, .page-transparent {@include clearfix;}
   @include breakpoint($breakpoint-S) {
     &:first-child {@include pad(.75, 0);}
   }
-  img {
-    width: 90%;
-    float: none;
-    text-align: center;
-    padding:1em;
-    @include breakpoint($breakpoint-S) {
-      float: left;
-      @include span-columns(3, 8);
-  
+  a {
+    img{
+      width: 90%;
+      float: none;
+      text-align: center;
+      margin:1em;
+      border: 2px solid $border-color;
+      @include border-right-radius(5px);
+      @include breakpoint($breakpoint-S) {
+        float: left;
+        @include span-columns(3, 8);
+    
+        }
+      @include breakpoint($breakpoint-W) {
+        //float: left;
+        margin-right: 2em;
+        width: percentage(3/16);
       }
-    @include breakpoint($breakpoint-W) {
-      float: left;
-      margin:0;
-      padding-right: 1em;
-      width: percentage(3/16);
-      }
+    }
   }
 }
 .logo-wrap {
   postion: relative;
-  @extend gallery;
   @include breakpoint($breakpoint-M) {
-    @extend .right;
-  }
-  //padding-bottom: 1em;
+      @include span-columns(4 omega, 8);
+    }
   .logo {
     text-align: center;
     position: relative;
@@ -269,7 +270,20 @@ article.right p{
     clear: none
   }
 }
-   
+.socials {
+  position: relative;
+  text-align: center;
+  @include span-columns($total-columns);
+  a {@include unstyled-link;
+    i {
+      padding: 0 .2em;
+      @include link-colors($normal, $hover, $active, $visited, $focus); 
+      @include breakpoint($breakpoint-M) {
+        padding: 0 1em;
+        }
+      }
+  }
+}   
 .first-letter {
   font-size: 2em;
   font-weight: bolder;
